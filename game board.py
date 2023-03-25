@@ -80,5 +80,24 @@ def space_check(board ,position):
 # Checking if the board is full and returning a value
 
 def full_board_check(board):
-    pass
+    
+    for i in range(1,10):
+        if space_check(board, i):
+            return False 
+        
+        # Board is full We return True 
+        return True
+    
+# Checking players Next Position and return True
 
+def players_choice(board):
+    
+    position = 0
+    
+    while position not in [1,2,3,4,5,6,7,8,9] or not space_check(board, position):
+        position = int(input("Enter your New Position from (1 - 9) <<>> "))
+        
+        
+    return position
+        
+    
