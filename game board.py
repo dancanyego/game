@@ -17,10 +17,19 @@ display_board(test_board)
 
 # Welcome the player and ask them to chooce a position
 
-def player_input(player1,player2):
-    while True:
-        choice = input(("Welcome to the game Game {} Please Pick 'X' or 'Y' to continue")
-        if choice = 'X':
-            player1 = 'X'
-        else:
-            player2 = 'Y'
+def player_input():
+    choice = 'game on'
+     
+    while choice not in ['O','X']:
+        choice = input("Player 1 :: Enter Your Prefered Choice ::> ")
+        
+        if choice not in ['O','X']:
+            print("Sorry Invalid Choice!! Try again ")
+            
+        if choice in ['O','Y']:
+           return True
+        else :
+           return False
+       
+player_input()          
+    
