@@ -56,3 +56,23 @@ def win_check(board, mark):
     (board[9] == mark and board[5] == mark and board[1] == mark)) # diagonal
     
 win_check(test_board,'X')
+
+
+
+import random
+
+# To randomly choose the player to begin 
+
+def choose_first():
+    
+    flip = random.randint(0, 1)
+    
+    if flip == 0:
+        return 'Player1'
+    else:
+        return 'Player2'
+    
+    
+
+
+
