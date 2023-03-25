@@ -9,9 +9,18 @@ from IPython.display import clear_output
 
 def display_board(board):
     clear_output()
-    print(board[7]+'|'+board[8]+'|'+board[9] )
-    print(board[4]+'|'+board[5]+'|'+board[6] )
-    print(board[1]+'|'+board[2]+'|'+board[3] )
+    
+    print('   |   |')
+    print(' ' + board[7] + ' | ' + board[8] + ' | ' + board[9])
+    print('   |   |')
+    print('-----------')
+    print('   |   |')
+    print(' ' + board[4] + ' | ' + board[5] + ' | ' + board[6])
+    print('   |   |')
+    print('-----------')
+    print('   |   |')
+    print(' ' + board[1] + ' | ' + board[2] + ' | ' + board[3])
+    print('   |   |')
     
 test_board = [' ']*10
 display_board(test_board)
@@ -99,5 +108,18 @@ def players_choice(board):
         
         
     return position
+
+# Check if a player wants to replay
+
+def replay():
+    
+    choice = input("Wanna Play again 'Y' or 'N' :> ")
+    
+    return choice == 'Y'
+
+# Bringing together the logic
+
+
+    
         
     
