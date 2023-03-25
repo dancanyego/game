@@ -8,6 +8,7 @@ Created on Sat Mar 25 22:57:35 2023
 from IPython.display import clear_output
 
 def display_board(board):
+    clear_output()
     print(board[7]+'|'+board[8]+'|'+board[9] )
     print(board[4]+'|'+board[5]+'|'+board[6] )
     print(board[1]+'|'+board[2]+'|'+board[3] )
@@ -18,18 +19,24 @@ display_board(test_board)
 # Welcome the player and ask them to chooce a position
 
 def player_input():
-    choice = 'game on'
-     
-    while choice not in ['O','X']:
-        choice = input("Player 1 :: Enter Your Prefered Choice ::> ")
+    marker = ''
+    # Asking the player to choose X OR O
+    while marker != 'X' and marker != 'O':
+        marker = input("Player1 choose X or O : => ")
         
-        if choice not in ['O','X']:
-            print("Sorry Invalid Choice!! Try again ")
-            
-        if choice in ['O','Y']:
-           return True
-        else :
-           return False
-       
-player_input()          
+    player1 = marker
+    
+    if player1 == 'X':
+        player2 = 'O'
+    else:
+        player2 = 'X'
+        
+    return(player1,player2)
+player1_marker,player2_marker = player_input()
+player_input()
+    
+def place_marker(board, marker, position):
+    
+    pass
+   
     
