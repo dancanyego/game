@@ -22,7 +22,7 @@ def player_input():
     marker = ''
     # Asking the player to choose X OR O
     while marker != 'X' and marker != 'O':
-        marker = input("Player1 choose X or O : => ")
+        marker = input("Player1 choose X or O : => ").upper()
         
     player1 = marker
     
@@ -32,11 +32,27 @@ def player_input():
         player2 = 'X'
         
     return(player1,player2)
-player1_marker,player2_marker = player_input()
+
+# Using tupple unpacking in order to assign the input 
+player1_marker,player2_marker = player_input()  
 player_input()
     
 def place_marker(board, marker, position):
     
-    pass
-   
+    board[position] = marker
     
+    
+    # Check The winner of the game Through checking the winning combinations
+    
+def win_check(board, mark):
+    
+    return ((board[7] == mark and board[8] == mark and board[9] == mark) or # across the top
+    (board[4] == mark and board[5] == mark and board[6] == mark) or # across the middle
+    (board[1] == mark and board[2] == mark and board[3] == mark) or # across the bottom
+    (board[7] == mark and board[4] == mark and board[1] == mark) or # down the middle
+    (board[8] == mark and board[5] == mark and board[2] == mark) or # down the middle
+    (board[9] == mark and board[6] == mark and board[3] == mark) or # down the right side
+    (board[7] == mark and board[5] == mark and board[3] == mark) or # diagonal
+    (board[9] == mark and board[5] == mark and board[1] == mark)) # diagonal
+    
+win_check(test_board,'X')
