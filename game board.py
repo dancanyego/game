@@ -73,6 +73,12 @@ def choose_first():
         return 'Player2'
     
     
+def space_check(board ,position):
+    
+    return board[position] == ''
 
+# Checking if the board is full and returning a value
 
+def full_board_check(board):
+    pass
 
