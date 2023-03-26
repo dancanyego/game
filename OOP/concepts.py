@@ -28,3 +28,25 @@ my_dog = Dog(breed = 'chiuhaha',name = 'sammy')
 my_dog.bark()
 my_dog.breed
 
+
+
+
+# New  Class 
+
+class Circle():
+    # Class Object attribute
+    
+    pi = 3.142
+    
+    def __init__(self,radius =1):
+        self.radius = radius
+        
+    #Method
+    
+    def get_circumference(self):
+        return self.radius * self.pi*2
+    
+    # Instance of the circle
+my_cirle = Circle()
+
+my_cirle.get_circumference()
