@@ -17,6 +17,7 @@ class Dog():
         self.name = name
         
         
+        
     # Operations/ Actions ------->> Methods
     
     def bark(self):
@@ -40,7 +41,7 @@ class Circle():
     
     def __init__(self,radius =1):
         self.radius = radius
-        
+        self.area = radius*radius*Circle.pi
     #Method
     
     def get_circumference(self):
