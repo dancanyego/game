@@ -28,3 +28,34 @@ class Dog(Animal):
 mydog = Dog()
 
 mydog.eat()
+
+
+
+# Polymorphism in python
+
+class Cat():
+    def __init__(self,name):
+        self.name = name
+        
+    def speak(self):
+        return self.name + " Says Meaw meaw Niggga"
+    
+    
+class Donkey():
+    def __init__(self,name):
+        self.name = name
+        
+    def speak(self):
+        return self.name + " Says hiihooo Niggga"
+    
+garry = Cat("Garry")
+felix = Donkey("Felo")
+
+print(garry.speak())
+
+print(felix.speak())
+
+def pet_speak(pet):
+    print(pet.speak())
+    
+pet_speak(garry)
