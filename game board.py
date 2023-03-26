@@ -119,6 +119,53 @@ def replay():
 
 # Bringing together the logic
 
+#While loop to keep running the game 
+
+#Break the loop with replay
+
+print("Welcome to Tic TAC Toe")
+
+while True:
+    # play the game 
+    ## Setting the board (Whos first and choose markers )
+    
+    the_board = [' '] * 10
+    
+    player1_marker,player2_marker = player_input()
+    
+    turn = choose_first()
+    print(turn + ' Will Go First !!')
+    
+    play_game = "Ready to play game! <Y> or <N> :".capitalize()
+    
+    if play_game == 'Y' :
+        game_on = True
+    else:
+        game_on = False
+        
+        
+    # Game Play
+    
+    while game_on:
+        if turn == 'Player 1':
+            
+            ## Player 1 Turn
+            pass
+            
+        
+        else:
+            
+            ## Player2 Turn
+            pass
+    
+    
+    
+    
+    #Game Play(Player1 turn and player2 Turn)
+    
+    
+    if not replay():
+        break
 
     
         
