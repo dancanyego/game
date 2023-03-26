@@ -150,13 +150,61 @@ while True:
         if turn == 'Player 1':
             
             ## Player 1 Turn
-            pass
+            
+            # Show the Board
+            display_board(the_board)
+            
+            #Choose a position 
+            position = players_choice(the_board)
+            
+            #Place a marker at the position
+            
+            place_marker(the_board, player1_marker,position)
+            
+            #check if they won
+            
+            if win_check(the_board, player1_marker):
+                display_board(the_board)
+                print('Player 1 Has finally won!!')
+                game_on = False
+            else:
+                if full_board_check(the_board):
+                    display_board(the_board)
+                    print("The game is a tie!!")
+                    game_on = False
+                else:
+                    turn = "Player 2"
+            #Check if They tied
+            #No Tie or win, Next players Turn 
+        else:
+            ##   player 2 turn 
+            # Show the Board
+            display_board(the_board)
+            
+            #Choose a position 
+            position = players_choice(the_board)
+            
+            #Place a marker at the position
+            
+            place_marker(the_board, player1_marker,position)
+            
+            #check if they won
+            
+            if win_check(the_board, player2_marker):
+                display_board(the_board)
+                print('Player 1 Has finally won!!')
+                game_on = False
+            else:
+                if full_board_check(the_board):
+                    display_board(the_board)
+                    print("The game is a tie!!")
+                    game_on = False
+                else:
+                    turn = "Player 2"
             
         
-        else:
+           
             
-            ## Player2 Turn
-            pass
     
     
     
