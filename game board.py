@@ -186,13 +186,13 @@ while True:
             
             #Place a marker at the position
             
-            place_marker(the_board, player1_marker,position)
+            place_marker(the_board, player2_marker,position)
             
             #check if they won
             
             if win_check(the_board, player2_marker):
                 display_board(the_board)
-                print('Player 1 Has finally won!!')
+                print('Player 2 Has finally won!!')
                 game_on = False
             else:
                 if full_board_check(the_board):
