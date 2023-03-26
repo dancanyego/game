@@ -6,12 +6,25 @@ Created on Sun Mar 26 22:38:38 2023
 """
 
 class Dog():
-    def __init__(self,breed):
+    ## Class object attribute and these are the same for any instance of a class
+    
+    species = 'mammal'
+    
+    def __init__(self,breed,name):
         
         
         self.breed = breed
+        self.name = name
         
-my_dog = Dog(breed = 'chiuhaha')
-
+        
+    # Operations/ Actions ------->> Methods
+    
+    def bark(self):
+        print("wooof my name is {}".format(self.name))
+        print("Woof")
+        
+        
+my_dog = Dog(breed = 'chiuhaha',name = 'sammy')
+my_dog.bark()
 my_dog.breed
 
