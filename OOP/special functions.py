@@ -14,7 +14,17 @@ class Book():
         self.category = category
         
     def __str__(self):
-        return ("the {} book by { } named {} was Launched by {} himselfu").format(self.category, self.author,self.title,self.title)
+        return f"{self.title} rocks by {self.author}"
+    
+    def __len__(self):
+        return self.pages
+    
+    def __del__(self):
+        print("The Book has been deleted")
     
     
 b = Book('chemosi', 'author', 200, 'category')
+
+print(b)
+print('The book is of pages ' , len(b))
+del(b)
