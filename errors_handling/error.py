@@ -44,4 +44,14 @@ def ask_for_int():
             print("End of Block ")
         
 ask_for_int()
+
+try:
+    for i in ['a','b','c']:
+        print(i**2)
+        
+except TypeError:
+    print("Type error")
+        
+finally:
+    print("I run after That")
     
