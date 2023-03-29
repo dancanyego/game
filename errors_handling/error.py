@@ -2,16 +2,15 @@ def add(n1,n2):
     print(n1+ n2)
 add(30, 50)    
 
-number_1 = int(input("Enter Your first Number  "))
-number_2 = int(input("Enter Your 2nd Number  "))
-
+try:
+    number_1 = int(input("Enter Your first Number  "))
+    number_2 = int(input("Enter Your 2nd Number  "))
+    
+except:
+   print("Addition Is Complete")
+   
 add(number_1, number_2)
 
-
-try:
-    pass
-except:
-    pass
 
 
 try:
