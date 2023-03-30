@@ -55,3 +55,20 @@ except TypeError:
 finally:
     print("I run after That")
     
+    
+    
+def ask():
+    while True:
+        try:
+            num = int(input("Input an integer: "))
+            z = num**2
+        except:
+            print("An error occurred! Please try again!")
+            continue
+            
+        else:
+            break
+        
+    print("Your Square Is:> ", z)
+    
+ask()
