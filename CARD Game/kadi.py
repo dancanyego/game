@@ -44,6 +44,10 @@ class Deck():
         return self.all_cards.pop()
                 
 new_deck = Deck()
+new_deck.shuffle()
+mycard = new_deck.deal_one()
+print(mycard)
+print(len(new_deck.all_cards))
 bottom_card =new_deck.all_cards[-1]
 
 #for card_object in new_deck.all_cards: 
