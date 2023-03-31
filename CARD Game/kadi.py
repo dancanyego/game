@@ -44,10 +44,36 @@ class Deck():
         return self.all_cards.pop()
                 
 new_deck = Deck()
+new_deck.shuffle()
+mycard = new_deck.deal_one()
+print(mycard)
+print(len(new_deck.all_cards))
 bottom_card =new_deck.all_cards[-1]
 
 #for card_object in new_deck.all_cards: 
 #  print(card_object)
+
+#Player Class
+
+class Player():
+    
+    def __init__(self,name):
+        
+        self.name = name
+        self.all_cards = []
+        
+    def remove_one(self):
+        pass
+    
+    def add_cards(self,new_cards):
+        pass
+    
+    def __str__(self):
+        return f'player {self.name} : has {len(self.all_cards)} cards'
+    
+new_player = Player('Jomba')
+print(new_player)
+        
 
 
     
