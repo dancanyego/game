@@ -55,23 +55,31 @@ bottom_card =new_deck.all_cards[-1]
 
 #Player Class
 
-class Player():
+class Player:
     
     def __init__(self,name):
-        
         self.name = name
-        self.all_cards = []
+        # A new player has no cards
+        self.all_cards = [] 
         
     def remove_one(self):
-        pass
+        # Note we remove one card from the list of all_cards
+        # We state 0 to remove from the "top" of the deck
+        # We'll imagine index -1 as the bottom of the deck
+        return self.all_cards.pop(0)
     
     def add_cards(self,new_cards):
-        pass
+        if type(new_cards) == type([]):
+            self.all_cards.extend(new_cards)
+        else:
+            self.all_cards.append(new_cards)
+    
     
     def __str__(self):
-        return f'player {self.name} : has {len(self.all_cards)} cards'
-    
+        return f'Player {self.name} has {len(self.all_cards)} cards.'
 new_player = Player('Jomba')
+print(new_player)
+new_player.add_cards(mycard)
 print(new_player)
         
 
